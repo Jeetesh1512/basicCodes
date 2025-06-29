@@ -67,7 +67,7 @@ public:
         }
         else{
             parent[ulp_v]=ulp_u;
-            size[ulp_u]=size[ulp_v];
+            size[ulp_u]+=size[ulp_v];
         }
     }
 };
