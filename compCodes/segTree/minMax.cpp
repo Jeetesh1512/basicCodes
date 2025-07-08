@@ -28,8 +28,8 @@ public:
 
         int mid = low+((high-low)>>1);
 
-        int left = query(2*ind+1,low,mid);
-        int right = query(2*ind+2,mid+1,high);
+        int left = query(2*ind+1,low,mid,l,r);
+        int right = query(2*ind+2,mid+1,high,l,r);
 
         return max(left,right);
     }
