@@ -28,8 +28,8 @@ public:
 
         int mid = low+((high-low)>>1);
 
-        int left = query(2*ind+1,low,mid,nums);
-        int right = query(2*ind+2,mid+1,high,nums);
+        int left = query(2*ind+1,low,mid);
+        int right = query(2*ind+2,mid+1,high);
 
         return max(left,right);
     }
@@ -43,9 +43,9 @@ public:
         int mid = low+((high-low)>>1);
 
         if(i<=mid)
-            update(2*ind+1,low,mid,i,val,nums);
+            update(2*ind+1,low,mid,i,val);
         else
-            update(2*ind+2,mid+1,high,i,val,nums);
+            update(2*ind+2,mid+1,high,i,val);
 
         seg[ind] = max(seg[2*ind+1],seg[2*ind+2]);        
     }
